@@ -1,0 +1,761 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Md. Muhiul Islam Muhiuddin | Silicon Photonics, Materials and Quantum Sensing</title>
+<meta name="description" content="Lecturer at BRAC University and M.Sc. researcher at BUET working on silicon photonics, photonic inverse design and quantum sensing with spin defects in hexagonal boron nitride.">
+<meta property="og:title" content="Md. Muhiul Islam Muhiuddin">
+<meta property="og:description" content="Silicon photonics, photonic inverse design, 2D FETs and quantum sensing. Lecturer, BRAC University; M.Sc. researcher, BUET.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#f5fbff">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b6a8d'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='28' font-weight='700' text-anchor='middle' fill='white'%3EMM%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet">
+
+<script>
+/* Apply saved theme before first paint to avoid a flash. */
+try { var t = localStorage.getItem('theme'); if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Md. Muhiul Islam Muhiuddin",
+  "jobTitle": "Lecturer",
+  "worksFor": { "@type": "CollegeOrUniversity", "name": "BRAC University" },
+  "alumniOf": { "@type": "CollegeOrUniversity", "name": "Bangladesh University of Engineering and Technology" },
+  "knowsAbout": ["Silicon photonics", "Photonic inverse design", "Quantum sensing", "Hexagonal boron nitride", "2D material transistors"]
+}
+</script>
+
+<style>
+:root {
+  --bg: #ffffff;
+  --surface: #ffffff;
+  --text: #14202b;
+  --muted: #4d5b69;
+  --line: #d9e6f0;
+  --line-strong: #b4cadb;
+  --accent: #0369a1;
+  --accent-ink: #ffffff;
+  --accent-soft: #dff2ff;
+  --ph-bg: rgba(255,255,255,.75);
+  --ph-line: #7fc0e4;
+  --band-sky: #eef8ff;
+  --band-sun: #fff8e3;
+  --band-mint: #ebfbf2;
+  --band-peach: #fff1ea;
+  --band-lav: #f4efff;
+  --hero:
+    radial-gradient(760px 420px at 92% 0%, #ffe49a 0%, rgba(255,228,154,0) 62%),
+    radial-gradient(820px 480px at 0% 0%, #b9e6ff 0%, rgba(185,230,255,0) 64%),
+    radial-gradient(760px 420px at 55% 110%, #c3f3dc 0%, rgba(195,243,220,0) 62%),
+    #f5fbff;
+  --shadow: 0 1px 2px rgba(3,105,161,.06), 0 10px 28px rgba(3,105,161,.09);
+  --r: 14px;
+  --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+/* Dark mode is opt-in through the toggle button; the default is always light. */
+:root[data-theme="dark"] {
+  --bg: #0e1216; --surface: #151a20; --text: #e8ebef; --muted: #9aa5b1;
+  --line: #242b33; --line-strong: #36424e; --accent: #6cc0e0; --accent-ink: #06222e;
+  --accent-soft: #12303c; --ph-bg: rgba(255,255,255,.04); --ph-line: #3a5666;
+  --band-sky: #0f1c26; --band-sun: #1d1a10; --band-mint: #0f1e18; --band-peach: #221614; --band-lav: #18142a;
+  --hero:
+    radial-gradient(760px 420px at 92% 0%, rgba(255,200,80,.16) 0%, rgba(255,200,80,0) 62%),
+    radial-gradient(820px 480px at 0% 0%, rgba(80,170,230,.22) 0%, rgba(80,170,230,0) 64%),
+    radial-gradient(760px 420px at 55% 110%, rgba(70,200,150,.16) 0%, rgba(70,200,150,0) 62%),
+    #0e1216;
+  --shadow: none;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 76px; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font-family: var(--sans); font-size: 16px; line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+[hidden] { display: none !important; }
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { text-decoration-thickness: 2px; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+h1, h2, h3 { font-family: var(--serif); line-height: 1.2; margin: 0; letter-spacing: -0.01em; }
+p { margin: 0 0 1em; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 0 20px; }
+.skip { position: absolute; left: -999px; top: 8px; background: var(--accent); color: var(--accent-ink); padding: 8px 12px; border-radius: 8px; z-index: 100; }
+.skip:focus { left: 8px; }
+
+/* ---------- header ---------- */
+.site-header {
+  position: sticky; top: 0; z-index: 50;
+  background: color-mix(in srgb, var(--bg) 90%, transparent);
+  backdrop-filter: saturate(1.4) blur(10px);
+  border-bottom: 3px solid transparent;
+  border-image: linear-gradient(90deg, #0ea5e9, #22c55e, #facc15, #fb7185) 1;
+}
+.site-header .wrap { display: flex; align-items: center; gap: 16px; height: 60px; }
+.brand { font-family: var(--serif); font-weight: 700; font-size: 18px; color: var(--text); text-decoration: none; white-space: nowrap; }
+.nav { display: flex; gap: 2px; margin-left: auto; overflow-x: auto; scrollbar-width: none; }
+.nav::-webkit-scrollbar { display: none; }
+.nav a {
+  color: var(--muted); text-decoration: none; font-size: 14px; font-weight: 500;
+  padding: 6px 10px; border-radius: 8px; white-space: nowrap;
+}
+.nav a:hover { color: var(--text); background: var(--accent-soft); }
+.nav a.active { color: var(--accent); background: var(--accent-soft); }
+.theme-btn {
+  flex: none; width: 36px; height: 36px; border-radius: 10px; border: 1px solid var(--line-strong);
+  background: transparent; color: var(--text); cursor: pointer; display: grid; place-items: center;
+}
+.theme-btn:hover { background: var(--accent-soft); }
+.theme-btn svg { width: 18px; height: 18px; }
+@media (max-width: 760px) { .brand { display: none; } .nav { margin-left: 0; } }
+
+/* ---------- hero ---------- */
+.hero { padding: 56px 0 56px; background: var(--hero); }
+.hero-grid { display: grid; grid-template-columns: 1fr 240px; gap: 48px; align-items: center; }
+.eyebrow { font-size: 13px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); margin-bottom: 14px; }
+.hero h1 { font-size: clamp(34px, 5.2vw, 52px); font-weight: 700; margin-bottom: 14px; }
+.role { font-size: 17px; color: var(--muted); margin-bottom: 18px; }
+.role strong { color: var(--text); font-weight: 600; }
+.lede { font-size: 18px; max-width: 58ch; margin-bottom: 22px; }
+.status {
+  display: inline-flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 500;
+  padding: 6px 14px; border-radius: 999px; background: #d3f6e4; color: #0a6a40; margin-bottom: 22px;
+  border: 1px solid #a9e8c8;
+}
+:root[data-theme="dark"] .status { background: #12301f; color: #7be0aa; border-color: #1f5a3a; }
+.status::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: currentColor; }
+.btn-row { display: flex; flex-wrap: wrap; gap: 10px; }
+.btn {
+  display: inline-flex; align-items: center; gap: 8px; padding: 9px 16px; border-radius: 10px;
+  font-size: 14px; font-weight: 600; text-decoration: none; border: 1px solid var(--line-strong);
+  color: var(--text); background: var(--surface);
+}
+.btn:hover { border-color: var(--accent); color: var(--accent); }
+.btn.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.btn.primary:hover { filter: brightness(1.08); color: var(--accent-ink); }
+.btn svg { width: 16px; height: 16px; }
+
+.photo {
+  position: relative; width: 240px; aspect-ratio: 1; border-radius: 50%; overflow: hidden;
+  background: var(--ph-bg); border: 2px dashed var(--ph-line); display: grid; place-items: center;
+  text-align: center; justify-self: center;
+}
+.photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; }
+.photo.has-img { border: 3px solid var(--surface); box-shadow: 0 0 0 1px var(--line-strong), var(--shadow); }
+.photo.has-img img { opacity: 1; }
+.photo.has-img .ph { display: none; }
+@media (max-width: 760px) {
+  .hero { padding-top: 32px; }
+  .hero-grid { grid-template-columns: 1fr; gap: 28px; }
+  .photo { width: 168px; order: -1; justify-self: start; }
+}
+
+/* ---------- sections ---------- */
+.section { padding: 60px 0; }
+#about, #publications, #experience { background: var(--bg); }
+#research, #skills { background: var(--band-sky); }
+#projects { background: var(--band-sun); }
+#teaching { background: var(--band-mint); }
+#honors { background: var(--band-peach); }
+#contact { background: var(--hero); padding-bottom: 72px; }
+.section h2::after {
+  content: ""; display: block; width: 60px; height: 5px; border-radius: 3px; margin-top: 10px;
+  background: linear-gradient(90deg, #0ea5e9, #22c55e 55%, #facc15);
+}
+.section h2 { font-size: 30px; margin-bottom: 14px; }
+.section-intro { color: var(--muted); max-width: 66ch; margin-bottom: 32px; }
+h3 { font-size: 21px; margin-bottom: 6px; }
+
+.about-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 48px; }
+@media (max-width: 860px) { .about-grid { grid-template-columns: 1fr; gap: 28px; } }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.chip {
+  font-size: 13px; font-weight: 500; padding: 4px 10px; border-radius: 999px;
+  background: var(--surface); border: 1px solid var(--line-strong); color: var(--text);
+}
+.chip.soft { background: var(--accent-soft); border-color: transparent; color: var(--accent); }
+.chip.soft:nth-child(5n+1) { background: #dcf1ff; color: #045a85; }
+.chip.soft:nth-child(5n+2) { background: #d6f6e6; color: #0a6a40; }
+.chip.soft:nth-child(5n+3) { background: #fff0bd; color: #7a4b00; }
+.chip.soft:nth-child(5n+4) { background: #ffdfd2; color: #9a3412; }
+.chip.soft:nth-child(5n+5) { background: #e9e1ff; color: #5b21b6; }
+:root[data-theme="dark"] .chip.soft { background: var(--accent-soft) !important; color: var(--accent) !important; }
+.label { font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin: 0 0 10px; }
+.facts { margin: 0; padding: 0; list-style: none; display: grid; gap: 14px; }
+.facts li { padding-left: 14px; border-left: 3px solid var(--accent-soft); }
+.facts b { display: block; font-weight: 600; }
+.facts span { color: var(--muted); font-size: 14px; }
+
+/* ---------- figures (auto-fill when an image file is added) ---------- */
+.fig {
+  position: relative; margin: 0; border-radius: var(--r); overflow: hidden;
+  background: var(--ph-bg); border: 1.5px dashed var(--ph-line);
+  aspect-ratio: 16 / 10; display: grid; place-items: center; text-align: center;
+}
+.fig img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; }
+.fig.has-img { aspect-ratio: auto; border: 1px solid var(--line); background: var(--surface); }
+.fig.has-img img { position: static; opacity: 1; height: auto; max-height: 460px; object-fit: contain; display: block; margin: 0 auto; }
+.fig.has-img .ph { display: none; }
+.fig + figcaption { display: none; font-size: 13px; color: var(--muted); margin-top: 8px; line-height: 1.5; }
+.fig.has-img + figcaption { display: block; }
+.ph { padding: 12px; display: grid; gap: 4px; justify-items: center; color: var(--muted); font-size: 13px; }
+.ph b { font-weight: 600; font-size: 12px; letter-spacing: .06em; text-transform: uppercase; }
+.ph i { font-style: normal; max-width: 30ch; }
+.ph code { font-size: 11.5px; padding: 2px 8px; border-radius: 6px; background: var(--surface); border: 1px solid var(--line); color: var(--text); word-break: break-all; }
+.ph svg { width: 26px; height: 26px; opacity: .6; }
+
+/* ---------- research features ---------- */
+.feature { display: grid; grid-template-columns: 5fr 6fr; gap: 36px; align-items: center; padding: 28px 0; }
+.feature + .feature { border-top: 1px solid var(--line); }
+.feature:nth-of-type(even) .fig-wrap { order: 2; }
+@media (max-width: 800px) { .feature { grid-template-columns: 1fr; gap: 18px; } .feature:nth-of-type(even) .fig-wrap { order: 0; } }
+.meta { color: var(--muted); font-size: 14px; margin-bottom: 12px; }
+.badge {
+  display: inline-block; font-size: 12px; font-weight: 600; padding: 2px 9px; border-radius: 999px;
+  background: var(--accent-soft); color: var(--accent); margin-right: 6px; vertical-align: 2px;
+}
+.badge.neutral { background: var(--ph-bg); color: var(--muted); border: 1px solid var(--line); }
+.feature .chips { margin-top: 14px; }
+
+/* ---------- publications ---------- */
+.pub-group { margin-bottom: 36px; }
+.pub-group h3 { font-size: 15px; font-family: var(--sans); font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-bottom: 14px; }
+.pub { display: grid; grid-template-columns: 200px 1fr; gap: 22px; padding: 18px 0; border-top: 1px solid var(--line); }
+.pub:first-of-type { border-top: 0; }
+@media (max-width: 640px) { .pub { grid-template-columns: 1fr; gap: 12px; } .pub .fig { max-width: 320px; } }
+.pub .fig { aspect-ratio: 4 / 3; }
+.pub .fig.has-img { aspect-ratio: auto; }
+.pub .ph i { display: none; }
+.pub .ph code { font-size: 10.5px; }
+.pub h4 { font-family: var(--serif); font-size: 18px; font-weight: 600; line-height: 1.35; margin: 0 0 6px; }
+.authors { font-size: 15px; margin-bottom: 4px; }
+.authors b { font-weight: 600; }
+.venue { font-size: 14px; color: var(--muted); margin-bottom: 8px; }
+.venue em { color: var(--text); }
+.pub p.summary { font-size: 14.5px; margin-bottom: 10px; }
+.links { display: flex; flex-wrap: wrap; gap: 8px; }
+.pill {
+  font-size: 12.5px; font-weight: 600; padding: 3px 11px; border-radius: 999px; text-decoration: none;
+  border: 1px solid var(--line-strong); color: var(--accent); background: var(--surface);
+}
+.pill:hover { background: var(--accent-soft); }
+.is-todo { outline: 2px dashed #d9822b; outline-offset: 2px; }
+
+/* ---------- project cards ---------- */
+.cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 20px; }
+.card {
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--r);
+  padding: 14px 14px 18px; box-shadow: var(--shadow); display: flex; flex-direction: column;
+  border-top: 5px solid #0ea5e9;
+}
+.card:nth-child(6n+2) { border-top-color: #facc15; }
+.card:nth-child(6n+3) { border-top-color: #22c55e; }
+.card:nth-child(6n+4) { border-top-color: #fb7185; }
+.card:nth-child(6n+5) { border-top-color: #8b5cf6; }
+.card:nth-child(6n+6) { border-top-color: #f97316; }
+.card .fig { margin-bottom: 14px; aspect-ratio: 16 / 9; }
+.card .fig.has-img { aspect-ratio: auto; }
+.card h3 { font-size: 18px; margin-bottom: 6px; }
+.card p { font-size: 14.5px; color: var(--muted); margin-bottom: 12px; }
+.card .chips { margin-top: auto; }
+.card .chip { font-size: 12px; padding: 2px 9px; }
+
+/* ---------- lists / timeline ---------- */
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; }
+@media (max-width: 860px) { .two-col { grid-template-columns: 1fr; gap: 36px; } }
+.tl { list-style: none; margin: 0; padding: 0 0 0 20px; border-left: 2px solid var(--line-strong); }
+.tl li { position: relative; padding: 0 0 26px 0; }
+.tl li:last-child { padding-bottom: 0; }
+.tl li::before {
+  content: ""; position: absolute; left: -27px; top: 7px; width: 12px; height: 12px; border-radius: 50%;
+  background: var(--bg); border: 3px solid var(--accent);
+}
+.tl .when { font-size: 13px; color: var(--muted); font-weight: 500; }
+.tl h3 { font-size: 18px; font-family: var(--sans); font-weight: 600; letter-spacing: 0; margin: 2px 0 2px; }
+.tl .where { font-size: 14.5px; color: var(--muted); margin-bottom: 6px; }
+.tl p, .tl ul { font-size: 14.5px; margin: 0 0 6px; }
+.tl ul { padding-left: 18px; }
+.tl li li { padding: 0; }
+.tl li li::before { display: none; }
+
+.teach-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; }
+.panel { background: var(--surface); border: 1px solid var(--line); border-left: 5px solid #22c55e; border-radius: var(--r); padding: 18px 20px; box-shadow: var(--shadow); }
+.panel:nth-child(2) { border-left-color: #facc15; }
+.panel:nth-child(3) { border-left-color: #0ea5e9; }
+.panel h3 { font-family: var(--sans); font-size: 15px; font-weight: 600; letter-spacing: 0; margin-bottom: 8px; }
+.panel ul { margin: 0; padding-left: 18px; font-size: 14.5px; }
+.panel li + li { margin-top: 4px; }
+.panel p { font-size: 14.5px; margin: 0; color: var(--muted); }
+
+.plain { margin: 0; padding: 0; list-style: none; display: grid; gap: 14px; }
+.plain li b { font-weight: 600; }
+.plain li span { display: block; font-size: 14px; color: var(--muted); }
+
+.skills { display: grid; gap: 18px; }
+.skills dt { font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+.skills dd { margin: 0; }
+
+.contact-card {
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--r);
+  padding: 26px; display: flex; flex-wrap: wrap; gap: 20px 40px; align-items: center; justify-content: space-between;
+  box-shadow: var(--shadow);
+}
+.contact-card p { margin: 0; }
+.footer { padding: 28px 0 48px; background: var(--bg); border-top: 3px solid transparent; border-image: linear-gradient(90deg, #0ea5e9, #22c55e, #facc15, #fb7185) 1; color: var(--muted); font-size: 13.5px; }
+.footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; }
+
+@media print {
+  .site-header, .theme-btn, .skip { display: none; }
+  .section { padding: 24px 0; break-inside: avoid; }
+  .fig:not(.has-img), .photo:not(.has-img) { display: none; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+
+<body>
+<!--
+  EDITING NOTES (also in README.md)
+  - Figures: save an image with the file name shown inside each dashed box into assets/img/ and it appears automatically.
+  - Links: any link with data-todo stays hidden until you replace href="#" with the real URL.
+  - Open the page with ?edit at the end of the address to see which link slots are still empty.
+-->
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="#top">Muhiul Islam Muhiuddin</a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#projects">Projects</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="theme-btn" id="themeBtn" type="button" aria-label="Toggle light and dark theme">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">Silicon photonics &middot; Inverse design &middot; 2D FETs &middot; Quantum sensing</div>
+      <h1>Md. Muhiul Islam Muhiuddin</h1>
+      <p class="role"><strong>Lecturer</strong>, Dept. of EEE, BRAC University<br><strong>M.Sc. researcher</strong>, Dept. of EEE, BUET<br>Dhaka, Bangladesh</p>
+      <p class="lede">I design nanophotonic devices with adjoint-based inverse design and study how photonic structures can improve quantum sensing with spin defects in hexagonal boron nitride.</p>
+      <div class="status">Applying for fully funded PhD positions</div>
+      <div class="btn-row">
+        <a class="btn primary" href="mailto:muhiul.islam@bracu.ac.bd">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+          Email
+        </a>
+        <a class="btn" href="assets/cv.pdf" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14"/></svg>
+          Download CV
+        </a>
+        <a class="btn" data-todo href="https://scholar.google.com/citations?user=m4mfEjsAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+        <a class="btn" data-todo href="https://www.linkedin.com/in/md-muhiul-islam-muhiuddin-b181401b1/?isSelfProfile=true" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a class="btn" data-todo href="#">GitHub</a>
+        <a class="btn" data-todo href="#">ORCID</a>
+      </div>
+    </div>
+
+    <div class="photo">
+      <img src="assets/img/photo.jpg" alt="Portrait of Md. Muhiul Islam Muhiuddin" onload="this.parentNode.classList.add('has-img')">
+      <span class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg><b>Your photo</b><code>assets/img/photo.jpg</code></span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="section" id="about">
+  <div class="wrap about-grid">
+    <div>
+      <h2>About</h2>
+      <p style="margin-top:18px">I am a Lecturer in the Department of Electrical and Electronic Engineering at BRAC University, Dhaka, and an M.Sc. student at the Bangladesh University of Engineering and Technology (BUET), where only the thesis defense remains. My research focuses on silicon photonics and photonic inverse design. I develop adjoint topology-optimized silicon-on-insulator devices using FDTD simulation, and for my thesis I study quantum sensing with VB&minus; spin defects in hexagonal boron nitride (h-BN), including adjoint-optimized photonic collection structures that aim to enhance spin-readout efficiency.</p>
+      <p>As an undergraduate researcher at BUET, I used ab initio DFT simulations to study ultrascaled two-dimensional field-effect transistors, which led to a journal article in <em>IEEE Transactions on Electron Devices</em>. Alongside research, I teach digital electronics, signals and systems, and an energy conversion laboratory, and I have hands-on experience in analog circuit design with Cadence Virtuoso and in FPGA-based digital design.</p>
+      <p>I am looking for a fully funded PhD position. </p>
+    </div>
+    <div>
+      <p class="label">Research interests</p>
+      <ul class="chips" style="margin-bottom:28px">
+        <li class="chip soft">Silicon photonics</li>
+        <li class="chip soft">Photonic inverse design</li>
+        <li class="chip soft">Adjoint topology optimization</li>
+        <li class="chip soft">Quantum sensing</li>
+        <li class="chip soft">h-BN spin defects</li>
+        <li class="chip soft">Nanophotonic simulation (FDTD)</li>
+        <li class="chip soft">2-D material FETs (DFT)</li>
+      </ul>
+      <p class="label">At a glance</p>
+      <ul class="facts">
+        <li><b>M.Sc. in EEE, BUET</b><span>GPA 3.75 / 4.00 &middot; thesis defense pending</span></li>
+        <li><b>B.Sc. in EEE, BUET</b><span>GPA 3.93 / 4.00 &middot; 12th of 199</span></li>
+        <li><b>1 journal article, 2 conference papers</b><span>IEEE TED, ICCIT, IEEE RAAI</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RESEARCH ============ -->
+<section class="section" id="research">
+  <div class="wrap">
+    <h2>Research</h2>
+    <p class="section-intro">The main threads of my work, from my M.Sc. thesis back to my undergraduate research.</p>
+
+    <article class="feature">
+      <div class="fig-wrap">
+        <figure class="fig"><img src="assets/img/hbn-quantum-sensing.png" alt="Schematic of VB- spin defects in hexagonal boron nitride with a photonic collection structure" onload="this.parentNode.classList.add('has-img')"><span class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-8 8"/></svg><b>Figure</b><i>VB&minus; defect in h-BN and the photonic collection structure</i><code>assets/img/hbn-quantum-sensing.png</code></span></figure>
+        <figcaption>VB&minus; spin defects in h-BN coupled to an adjoint-optimized photonic collection structure.</figcaption>
+      </div>
+      <div>
+        <h3>Quantum sensing with VB&minus; spin defects in hexagonal boron nitride</h3>
+        <p class="meta"><span class="badge">M.Sc. thesis</span> BUET &middot; Nov 2024 &ndash; present &middot; Supervisor: Dr. Kawsar Alam</p>
+        <p>My thesis aims to improve the sensitivity of defect-based h-BN quantum sensors. I investigate optically detected magnetic resonance (ODMR) of VB&minus; spin defects for quantum magnetometry, and I explore adjoint-optimized photonic collection structures that enhance spin-readout efficiency.</p>
+        <ul class="chips"><li class="chip">h-BN</li><li class="chip">VB&minus; spin defects</li><li class="chip">ODMR</li><li class="chip">Quantum magnetometry</li><li class="chip">Adjoint optimization</li></ul>
+      </div>
+    </article>
+
+    <article class="feature">
+      <div class="fig-wrap">
+        <figure class="fig"><img src="assets/img/soi-ri-sensor.png" alt="Inverse-designed all-silicon refractive index sensor and its simulated field profile" onload="this.parentNode.classList.add('has-img')"><span class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-8 8"/></svg><b>Figure</b><i>Optimized device layout and field profile</i><code>assets/img/soi-ri-sensor.png</code></span></figure>
+        <figcaption>Inverse-designed all-silicon refractive index sensor on a 220 nm SOI platform.</figcaption>
+      </div>
+      <div>
+        <h3>Adjoint-optimized all-silicon refractive index sensor</h3>
+        <p class="meta"><span class="badge neutral">Manuscript in preparation</span> BUET &middot; silicon-on-insulator, 220 nm</p>
+        <p>I designed and inversely optimized a compact all-silicon refractive index sensor using adjoint-based topology optimization with FDTD simulation in Tidy3D. The optimized device reaches competitive sensitivity, quality factor and figure of merit on a 220 nm SOI platform.</p>
+        <ul class="chips"><li class="chip">Silicon photonics</li><li class="chip">Topology optimization</li><li class="chip">FDTD (Tidy3D)</li><li class="chip">Refractive index sensing</li></ul>
+      </div>
+    </article>
+
+    <article class="feature">
+      <div class="fig-wrap">
+        <figure class="fig"><img src="assets/img/fet-alcs-sip.png" alt="Structure and transfer characteristics of monolayer alpha-CS and SiP field-effect transistors" onload="this.parentNode.classList.add('has-img')"><span class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-8 8"/></svg><b>Figure</b><i>FET structure or transfer characteristics</i><code>assets/img/fet-alcs-sip.png</code></span></figure>
+        <figcaption>Monolayer &alpha;-CS and SiP n-type FETs studied with ab initio DFT.</figcaption>
+      </div>
+      <div>
+        <h3>Ultrascaled 2-D transistors: monolayer &alpha;-CS and SiP</h3>
+        <p class="meta"><span class="badge">Published</span> Undergraduate research, BUET &middot; Aug 2023 &ndash; Jul 2024</p>
+        <p>Using ab initio DFT simulations in QuantumATK, I studied n-type field-effect transistors based on monolayer &alpha;-CS and SiP, and investigated underlayer modulation strategies for scaling performance beyond the 5-nm technology node. The work appeared in <em>IEEE Transactions on Electron Devices</em> (2025).</p>
+        <ul class="chips"><li class="chip">DFT</li><li class="chip">QuantumATK</li><li class="chip">2-D materials</li><li class="chip">Beyond 5-nm FETs</li></ul>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ============ PUBLICATIONS ============ -->
+<section class="section" id="publications">
+  <div class="wrap">
+    <h2>Publications</h2>
+    <p class="section-intro">My name is in bold. Journal article first, then conference papers, then work in preparation.</p>
+
+    <div class="pub-group">
+      <h3>Journal article</h3>
+      <div class="pub">
+        <div><figure class="fig"><img src="assets/img/fet-alcs-sip.png" alt="Graphical abstract of the IEEE TED paper" onload="this.parentNode.classList.add('has-img')"><span class="ph"><b>Figure</b><i>Graphical abstract or key plot</i><code>assets/img/fet-alcs-sip.png</code></span></figure></div>
+        <div>
+          <h4>Ultrascaled Monolayer &alpha;-CS and SiP 2-D n-Type FETs: Performance Enhancement via Underlayer Modulation Beyond 5-nm Technology Nodes</h4>
+          <p class="authors"><b>M. M. I. Muhiuddin</b>, S. Kundu, and M. K. Alam</p>
+          <p class="venue"><em>IEEE Transactions on Electron Devices</em>, 2025</p>
+          <p class="summary">An ab initio study of monolayer &alpha;-CS and SiP n-type FETs and how underlayer modulation can improve their performance at technology nodes below 5 nm.</p>
+          <div class="links"><a class="pill" data-todo href="https://ieeexplore.ieee.org/abstract/document/11150659" target="_blank" rel="noopener noreferrer">DOI</a><a class="pill" data-todo href="#">PDF</a></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-group">
+      <h3>Conference papers</h3>
+      <div class="pub">
+        <div><figure class="fig"><img src="assets/img/opamp-biomedical.png" alt="Circuit schematic or results of the class-AB op-amp" onload="this.parentNode.classList.add('has-img')"><span class="ph"><b>Figure</b><i>Op-amp schematic or gain/noise plot</i><code>assets/img/opamp-biomedical.png</code></span></figure></div>
+        <div>
+          <h4>A High-Performance, Low-Noise Class-AB Folded-Cascode Op-Amp with Novel Biasing Circuit for Biomedical Applications</h4>
+          <p class="authors">S. Bain, S. B. Shuvo, S. Ahmed, S. Kundu, and <b>M. M. I. Muhiuddin</b></p>
+          <p class="venue">Proc. 27th <em>International Conference on Computer and Information Technology (ICCIT)</em>, 2024</p>
+          <p class="summary">A class-AB folded-cascode operational amplifier with a novel biasing circuit, designed for high performance and low noise in biomedical applications.</p>
+          <div class="links"><a class="pill" data-todo href="https://ieeexplore.ieee.org/abstract/document/11021866" target="_blank" rel="noopener noreferrer">DOI</a><a class="pill" data-todo href="#">PDF</a></div>
+        </div>
+      </div>
+      <div class="pub">
+        <div><figure class="fig"><img src="assets/img/self-balancing-robot.png" alt="The self-balancing robot built for the RAAI paper" onload="this.parentNode.classList.add('has-img')"><span class="ph"><b>Figure</b><i>Robot photo or response plot</i><code>assets/img/self-balancing-robot.png</code></span></figure></div>
+        <div>
+          <h4>Optimized Control Strategy for Self-Balancing Robot: Micro-Stepping Motors and PID Algorithm</h4>
+          <p class="authors"><b>M. M. I. Muhiuddin</b>, A. A. Taki, K. Zahin, M. J. Karim, and S. M. Al Kais</p>
+          <p class="venue">Proc. <em>IEEE 3rd International Conference on Robotics, Automation, and Artificial Intelligence (RAAI)</em>, 2024</p>
+          <p class="summary">A control strategy for a self-balancing robot that combines micro-stepping motors with a PID algorithm.</p>
+          <div class="links"><a class="pill" data-todo href="https://ieeexplore.ieee.org/abstract/document/10928610" target="_blank" rel="noopener noreferrer">DOI</a><a class="pill" data-todo href="#">PDF</a></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-group">
+      <h3>In preparation</h3>
+      <div class="pub">
+        <div><figure class="fig"><img src="assets/img/soi-ri-sensor.png" alt="Inverse-designed refractive index sensor" onload="this.parentNode.classList.add('has-img')"><span class="ph"><b>Figure</b><i>Optimized device layout</i><code>assets/img/soi-ri-sensor.png</code></span></figure></div>
+        <div>
+          <h4>Adjoint topology-optimized all-silicon SOI refractive index sensor <span class="badge neutral" style="vertical-align:2px">working title</span></h4>
+          <p class="authors"><b>M. M. I. Muhiuddin</b> et al.</p>
+          <p class="venue">Manuscript in preparation for journal submission</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECTS ============ -->
+<section class="section" id="projects">
+  <div class="wrap">
+    <h2>Other projects</h2>
+    <p class="section-intro">Academic projects from my M.Sc. and undergraduate years, across photonics, spintronics, remote sensing, digital design and embedded control.</p>
+
+    <div class="cards">
+      <article class="card">
+        <figure class="fig"><img src="assets/img/thz-differentiator.png" alt="Microring waveguide resonator for THz temporal differentiation and its simulated response" onload="this.parentNode.classList.add('has-img')"><span class="ph"><b>Figure</b><i>Microring structure or S21 response</i><code>assets/img/thz-differentiator.png</code></span></figure>
+        <h3>THz temporal differentiator</h3>
+        <p>Implemented a THz temporal differentiator by reproducing a microring waveguide resonator design, and developed a baseband frequency-domain verification method using interpolated FDTD S21 data.</p>
+        <ul class="chips"><li class="chip">THz photonics</li><li class="chip">Microring resonator</li><li class="chip">FDTD</li></ul>
+      </article>
+
+      <article class="card">
+        <figure class="fig"><img src="assets/img/remote-sensing-dl.png" alt="Building footprint segmentation result" onload="this.parentNode.classList.add('has-img')"><span class="ph"><b>Figure</b><i>Segmentation or detection result</i><code>assets/img/remote-sensing-dl.png</code></span></figure>
+        <h3>Deep learning for remote sensing</h3>
+        <p>Applied deep learning to building footprint segmentation with the DMAF-RASNet architecture, and explored YOLOv5-based detection of flood-affected people.</p>
+        <ul class="chips"><li class="chip">DMAF-RASNet</li><li class="chip">YOLOv5</li><li class="chip">Python</li></ul>
+      </article>
+
+      <article class="card">
+        <figure class="fig"><img src="assets/img/webcam-spectroscopy.png" alt="Webcam-based spectrometer and a measured spectrum" onload="this.parentNode.classList.add('has-img')"><span class="ph"><b>Figure</b><i>Setup photo or measured spectrum</i><code>assets/img/webcam-spectroscopy.png</code></span></figure>
+        <h3>Low-cost real-time spectroscopy</h3>
+        <p>A low-cost spectroscopy setup built around a webcam, with real-time spectral analysis in Python.</p>
+        <ul class="chips"><li class="chip">Spectroscopy</li><li class="chip">Python</li><li class="chip">Instrumentation</li></ul>
+      </article>
+
+      <article class="card">
+        <figure class="fig"><img src="assets/img/riscv-spi.png" alt="SPI interface block diagram and layout for a RISC-V core" onload="this.parentNode.classList.add('has-img')"><span class="ph"><b>Figure</b><i>Block diagram, waveform or layout</i><code>assets/img/riscv-spi.png</code></span></figure>
+        <h3>SPI interface for RISC-V</h3>
+        <p>An SPI interface for a RISC-V processor in Verilog, taken through FSM design, RTL, verification, and place and route.</p>
+        <ul class="chips"><li class="chip">Verilog</li><li class="chip">RTL</li><li class="chip">Verification</li><li class="chip">Place &amp; route</li></ul>
+      </article>
+
+      <article class="card">
+        <figure class="fig"><img src="assets/img/toggle-sot-mram.png" alt="Simulated magnetization switching in a toggle SOT-MRAM cell" onload="this.parentNode.classList.add('has-img')"><span class="ph"><b>Figure</b><i>Toggle switching of m<sub>z</sub> or toggle range vs &beta;</i><code>assets/img/toggle-sot-mram.png</code></span></figure>
+        <h3>Field-free and toggle SOT switching in PMA MRAM</h3>
+        <p>M.Sc. course project (EEE 6411, BUET; team of five). We simulated field-assisted, field-free and toggle spin-orbit-torque switching in a PMA MRAM cell using the LLGS equation, checked against a reference paper; the toggle range peaked at &beta; = 3&ndash;4. I worked on the LLGS model and the field-assisted cases.</p>
+        <ul class="chips"><li class="chip">SOT-MRAM</li><li class="chip">Spintronics</li><li class="chip">LLGS</li><li class="chip">Macromagnetic simulation</li></ul>
+      </article>
+
+      <article class="card">
+        <figure class="fig"><img src="assets/img/self-balancing-robot.png" alt="Self-balancing robot" onload="this.parentNode.classList.add('has-img')"><span class="ph"><b>Figure</b><i>Robot photo</i><code>assets/img/self-balancing-robot.png</code></span></figure>
+        <h3>Self-balancing robot</h3>
+        <p>A PID-based control system implementation for a self-balancing robot. See also my RAAI 2024 conference paper on this topic.</p>
+        <ul class="chips"><li class="chip">PID control</li><li class="chip">Embedded</li><li class="chip">Micro-stepping</li></ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TEACHING ============ -->
+<section class="section" id="teaching">
+  <div class="wrap">
+    <h2>Teaching</h2>
+    <p class="section-intro">Lecturer, Department of Electrical and Electronic Engineering, BRAC University &middot; Oct 2024 &ndash; present.</p>
+    <div class="teach-grid">
+      <div class="panel">
+        <h3>Courses taught</h3>
+        <ul>
+          <li>Digital Electronics</li>
+          <li>Signals &amp; Systems</li>
+          <li>Energy Conversion Laboratory</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3>Curriculum work</h3>
+        <ul>
+          <li>Restructured laboratory manuals</li>
+          <li>Prepared exam and assessment materials</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3>Training</h3>
+        <p>Trainer for the government-funded SICIP program <em>Analog VLSI Circuit and Layout Design</em>, a 15-week course (ongoing).</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE & EDUCATION ============ -->
+<section class="section" id="experience">
+  <div class="wrap two-col">
+    <div>
+      <h2 style="margin-bottom:24px">Experience</h2>
+      <ul class="tl">
+        <li>
+          <div class="when">Oct 2024 &ndash; Present</div>
+          <h3>Lecturer</h3>
+          <div class="where">Dept. of EEE, BRAC University, Dhaka</div>
+          <p>Teaching, lab coordination and curriculum development. See <a href="#teaching">Teaching</a>.</p>
+        </li>
+        <li>
+          <div class="when">Nov 2024 &ndash; Present</div>
+          <h3>M.Sc. Researcher</h3>
+          <div class="where">BUET, Dhaka</div>
+          <p>ODMR-based quantum sensing with VB&minus; spin defects in h-BN, and adjoint-optimized photonic collection structures for enhanced spin readout.</p>
+        </li>
+        <li>
+          <div class="when">Apr &ndash; Jul 2024</div>
+          <h3>Trainee Engineer, Analog Design Team</h3>
+          <div class="where">Ulkasemi Pvt. Limited, Bangladesh</div>
+          <p>Simulated and improved the behavior of existing analog circuit blocks in Cadence Virtuoso as part of a company-level circuit design project.</p>
+        </li>
+        <li>
+          <div class="when">Aug 2023 &ndash; Jul 2024</div>
+          <h3>Undergraduate Researcher</h3>
+          <div class="where">BUET, Dhaka</div>
+          <p>Ab initio DFT simulations of monolayer &alpha;-CS and SiP FETs; published in <em>IEEE Transactions on Electron Devices</em>.</p>
+        </li>
+      </ul>
+    </div>
+
+    <div id="education">
+      <h2 style="margin-bottom:24px">Education</h2>
+      <ul class="tl">
+        <li>
+          <div class="when">Nov 2024 &ndash; Present</div>
+          <h3>M.Sc. in Electrical and Electronic Engineering</h3>
+          <div class="where">Bangladesh University of Engineering and Technology (BUET)</div>
+          <p>GPA 3.75 / 4.00 &middot; only the defense remains.<br>Thesis: improving the sensitivity of a defect-based h-BN quantum sensor.<br>Supervisor: Dr. Kawsar Alam, Professor, Dept. of EEE, BUET.</p>
+        </li>
+        <li>
+          <div class="when">Apr 2019 &ndash; Jul 2024</div>
+          <h3>B.Sc. in Electrical and Electronic Engineering</h3>
+          <div class="where">Bangladesh University of Engineering and Technology (BUET)</div>
+          <p>Electronics major &middot; GPA 3.93 / 4.00 &middot; class position 12th out of 199.</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HONORS & SERVICE ============ -->
+<section class="section" id="honors">
+  <div class="wrap two-col">
+    <div>
+      <h2 style="margin-bottom:20px">Honors &amp; awards</h2>
+      <ul class="plain">
+        <li><b>University Merit Scholarship, BUET</b><span>2019 &ndash; 2023 &middot; awarded every semester for outstanding academic performance in the undergraduate program</span></li>
+        <li><b>Dean&rsquo;s List, BUET</b><span>2019 &ndash; 2023 &middot; consistently high academic standing across all terms</span></li>
+        <li><b>1st Runner-Up, VLSI Design Competition</b><span>EEE Day 2024, BUET</span></li>
+      </ul>
+    </div>
+    <div>
+      <h2 style="margin-bottom:20px">Leadership &amp; service</h2>
+      <ul class="plain">
+        <li><b>General Secretary, Electron Devices Society, BUET</b><span>2023 &middot; organized seminars, invited talks and outreach events; managed student engagement activities</span></li>
+        <li><b>Records Chair, BUET Optical and Photonics Society</b><span>2022 &middot; coordinated event documentation, outreach and workshop activities</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section class="section" id="skills">
+  <div class="wrap">
+    <h2 style="margin-bottom:24px">Skills &amp; tools</h2>
+    <dl class="skills" style="margin:0">
+      <div><dt>Simulation &amp; photonics</dt><dd><ul class="chips"><li class="chip">Tidy3D (FDTD)</li><li class="chip">QuantumATK</li><li class="chip">Quantum ESPRESSO</li><li class="chip">VASP</li><li class="chip">Cadence Virtuoso</li><li class="chip">NCSim</li><li class="chip">Material Studio</li><li class="chip">Lumerical (familiar)</li><li class="chip">Simulink</li><li class="chip">EDA Playground</li></ul></dd></div>
+      <div><dt>Programming</dt><dd><ul class="chips"><li class="chip">Python</li><li class="chip">MATLAB</li><li class="chip">C</li><li class="chip">C++</li><li class="chip">Verilog</li><li class="chip">SystemVerilog</li><li class="chip">ARM Assembly v7</li><li class="chip">HTML</li></ul></dd></div>
+      <div><dt>Hardware platforms</dt><dd><ul class="chips"><li class="chip">Altera FPGA</li><li class="chip">CPLD</li><li class="chip">STM32 Nucleo</li><li class="chip">ESP32 / Arduino</li><li class="chip">PCB soldering</li></ul></dd></div>
+      <div><dt>Languages</dt><dd><ul class="chips"><li class="chip">English</li><li class="chip">Bengali (native)</li></ul></dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="section" id="contact">
+  <div class="wrap">
+    <h2 style="margin-bottom:20px">Contact</h2>
+    <div class="contact-card">
+      <div>
+        <p><strong>Md. Muhiul Islam Muhiuddin</strong></p>
+        <p style="color:var(--muted)">Lecturer, Dept. of EEE, BRAC University<br>Dhaka, Bangladesh</p>
+        <p style="margin-top:10px"><a href="mailto:muhiul.islam@bracu.ac.bd">muhiul.islam@bracu.ac.bd</a></p>
+      </div>
+      <div class="btn-row">
+        <a class="btn primary" href="mailto:muhiul.islam@bracu.ac.bd">Send an email</a>
+        <a class="btn" href="assets/cv.pdf" target="_blank" rel="noopener noreferrer">Download CV</a>
+        <a class="btn" data-todo href="#" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+        <a class="btn" data-todo href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <span>&copy; 2026 Md. Muhiul Islam Muhiuddin</span>
+    <span>Last updated October 2026</span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var root = document.documentElement;
+
+  /* Theme toggle (remembers the choice when storage is available). */
+  var btn = document.getElementById('themeBtn');
+  btn.addEventListener('click', function () {
+    var cur = root.getAttribute('data-theme') || 'light';
+    var next = cur === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    try { localStorage.setItem('theme', next); } catch (e) {}
+  });
+
+  /* Hide link slots that have no URL yet; ?edit shows them outlined. */
+  var editing = /[?&]edit\b/.test(location.search);
+  document.querySelectorAll('a[data-todo]').forEach(function (a) {
+    var h = a.getAttribute('href');
+    if (!h || h === '#') {
+      if (editing) { a.classList.add('is-todo'); a.addEventListener('click', function (e) { e.preventDefault(); }); }
+      else { a.hidden = true; }
+    }
+  });
+
+  /* Highlight the current section in the nav. */
+  var links = Array.prototype.slice.call(document.querySelectorAll('.nav a'));
+  var map = {};
+  links.forEach(function (a) { map[a.getAttribute('href').slice(1)] = a; });
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting && map[en.target.id]) {
+          links.forEach(function (l) { l.classList.remove('active'); });
+          map[en.target.id].classList.add('active');
+        }
+      });
+    }, { rootMargin: '-35% 0px -60% 0px' });
+    Object.keys(map).forEach(function (id) {
+      var el = document.getElementById(id);
+      if (el) io.observe(el);
+    });
+  }
+})();
+</script>
+</body>
+</html>
